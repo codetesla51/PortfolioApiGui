@@ -1,0 +1,25 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+:root {
+    --bg-color: #000;
+    --acc-color: #27ea66;
+    --bg-sec-color: #101010;
+    --text-color: #fff;
+}
+* {
+    font-family: "Kanit", sans-serif;
+    transition: 0.3s all ease-in;
+}
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-family: Kanit;
+}
+section {
+    min-height: 100vh;
+    padding: 100px 3%;
+}
+
+

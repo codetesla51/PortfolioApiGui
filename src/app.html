@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <!-- Title and Meta Description -->
+        <title>
+            PortfolioAPI - Add Backend Functionality to Your Portfolio
+        </title>
+        <meta
+            name="description"
+            content="PortfolioAPI allows developers to seamlessly integrate backend features into their portfolio projects. Simplify your workflows and showcase your work with ease!"
+        />
+
+        <!-- Keywords for SEO -->
+        <meta
+            name="keywords"
+            content="PortfolioAPI, backend for portfolios, API for developers, portfolio tools, API integration, developer portfolio API"
+        />
+
+        <!-- Author -->
+        <meta name="author" content="Uthman Dev" />
+
+        <!-- Favicon -->
+        <link
+            rel="icon"
+            href="%sveltekit.assets%/server-path-svgrepo-com.svg"
+        />
+
+        <!-- Social Media Tags -->
+        <meta
+            property="og:title"
+            content="PortfolioAPI - Add Backend Functionality to Your Portfolio"
+        />
+        <meta
+            property="og:description"
+            content="PortfolioAPI allows developers to seamlessly integrate backend features into their portfolio projects. Simplify your workflows and showcase your work with ease!"
+        />
+        <meta property="og:image" content="%sveltekit.assets%/server-path-svgrepo-com.svg" />
+        <meta property="og:url" content="https://portfolioapi.example.com" />
+        <meta name="twitter:card" content="summary_large_image" />
+
+        <!-- Canonical Link -->
+        <link rel="canonical" href="https://portfolioapi.example.com" />
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Kanit:wght@100..900&family=Montserrat:wght@100..900&family=Permanent+Marker&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- FontAwesome -->
+        <script
+            src="https://kit.fontawesome.com/1b66d9b5de.js"
+            crossorigin="anonymous"
+            defer
+        ></script>
+
+        <!-- Swiper CSS for Sliders -->
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/swiper/swiper-bundle.min.css"
+        />
+
+        <!-- Structured Data for SEO -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "PortfolioAPI",
+                "url": "https://portfolioapi.example.com",
+                "description": "PortfolioAPI provides developers with tools to enhance their portfolios with backend features.",
+                "image": "%sveltekit.assets%/og-image.png",
+                "author": {
+                    "@type": "Person",
+                    "name": "Uthman Dev"
+                },
+                "keywords": [
+                    "PortfolioAPI",
+                    "backend for portfolios",
+                    "API for developers",
+                    "portfolio tools",
+                    "API integration",
+                    "developer portfolio API"
+                ]
+            }
+        </script>
+
+        <!-- SvelteKit Head -->
+        %sveltekit.head%
+    </head>
+    <body data-sveltekit-preload-data="hover">
+        <!-- Main Content -->
+        <div style="display: contents">%sveltekit.body%</div>
+
+        <!-- Swiper JS -->
+        <script
+            src="https://unpkg.com/swiper/swiper-bundle.min.js"
+            defer
+        ></script>
+    </body>
+</html>
