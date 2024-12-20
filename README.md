@@ -1,38 +1,60 @@
-# sv
+<div align="center">
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+# PortfolioAPI Landing Page
 
-## Creating a project
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Made with SvelteKit](https://img.shields.io/badge/Made%20with-SvelteKit-FF3E00.svg)](https://kit.svelte.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-38B2AC.svg)](https://tailwindcss.com/)
 
-If you're seeing this, you've probably already done this step. Congrats!
+</div>
+
+## Overview
+
+This is the official landing page for PortfolioAPI, built with SvelteKit and Tailwind CSS. It provides a clean, responsive interface to showcase the API's features and direct users to documentation and resources.
+
+## Prerequisites
+
+- Node.js 16.x or higher
+- npm or pnpm
+- Git
+
+## Quick Start
 
 ```bash
-# create a new project in the current directory
-npx sv create
+# Clone the repository
+git clone https://github.com/codetesla51/PortfolioApiGui
 
-# create a new project in my-app
-npx sv create my-app
-```
+# Navigate to project directory
+cd PortfolioApiGui
 
-## Developing
+# Install dependencies
+npm install
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
+# Start development server
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
-## Building
+## Technology Stack
 
-To create a production version of your app:
+- **Framework**: SvelteKit
+- **Styling**: Tailwind CSS
+- **Icons**: FontAwsome Icons
+- **Deployment**: Vercel (recommended)
 
-```bash
-npm run build
-```
+## Features
 
-You can preview the production build with `npm run preview`.
+- Modern, responsive design
+- Optimized performance
+- Mobile-first approach
+- SEO friendly
+- Clear call-to-action elements
+- Dark mode by default
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+## Related Resources
+
+- [PortfolioAPI Documentation](https://github.com/codetesla51/PortFolioAPI)
+- [SvelteKit Documentation](https://kit.svelte.dev/)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
+
+---
+
