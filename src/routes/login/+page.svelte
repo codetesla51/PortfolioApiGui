@@ -1,5 +1,6 @@
 <script lang="ts">
   import { goto } from '$app/navigation';
+  import Loader from '$lib/components/Loader.svelte';
 
   let isLogin = true;
   let email = '';
@@ -7,21 +8,21 @@
   let username = '';
   let error = '';
   let passwordVisible = false;
+  let isLoading = false;
 
-  // Toggle password visibility
   function togglePassword() {
     passwordVisible = !passwordVisible;
   }
 
-  // Handle form submission
   async function handleSubmit() {
-    // Client-side validation
     if (!email || !password || (!isLogin && !username)) {
       error = "All fields are required";
       return;
     }
 
-    const endpoint = isLogin ? 'http://localhost:8000/login' : 'http://localhost:8000/register';
+    isLoading = true; 
+
+    const endpoint = isLogin ? 'https://api-portfolio-v1.vercel.app/login' : 'https://api-portfolio-v1.vercel.app/register';
     const body = isLogin ? { email, password } : { email, password, name: username };
 
     try {
@@ -43,10 +44,13 @@
       }
     } catch (err) {
       error = 'An error occurred. Please try again.';
+    } finally {
+      isLoading = false; 
     }
   }
 </script>
 
+<Loader {isLoading} />
 <svelte:head>
   <title>{isLogin ? 'Login' : 'Register'} - PortfolioAPI</title>
 </svelte:head>

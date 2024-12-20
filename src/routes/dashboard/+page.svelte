@@ -1,10 +1,11 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import { goto } from '$app/navigation';
-
+import Loader from "$lib/components/Loader.svelte"
   let username = '';
   let email = '';
   let apiKey = '';
+  let isLoading = false;
 
   onMount(() => {
     username = sessionStorage.getItem('username') || '';
@@ -17,9 +18,11 @@
   });
 
 async function generateNewApiKey() {
+      isLoading = true; 
+
     try {
-      const response = await fetch('http://localhost:8000/updateAPIKEY', {
-        method: 'PUT', // Use PUT method
+      const response = await fetch('https://api-portfolio-v1.vercel.app/updateAPIKEY', {
+        method: 'PUT', 
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, api_key: apiKey }),
       });
@@ -36,6 +39,9 @@ async function generateNewApiKey() {
     } catch (err) {
       console.error('An error occurred while regenerating the API key:', err);
     }
+    finally{
+      isLoading=false;
+    }
   }
   function copyToClipboard() {
     navigator.clipboard.writeText(apiKey).then(() => {
@@ -47,6 +53,7 @@ async function generateNewApiKey() {
 <svelte:head>
   <title>Dashboard - PortfolioAPI</title>
 </svelte:head>
+<Loader {isLoading} />
 
 <div class="min-h-screen mt-10 bg-gray-100 dark:bg-gray-900 py-12 px-4 sm:px-6 lg:px-8 transition-colors duration-300">
   <div class="max-w-3xl mx-auto">
