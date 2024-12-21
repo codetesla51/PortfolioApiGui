@@ -48,4 +48,4 @@ import "../app.css";
   :global(body) {
     @apply bg-white dark:bg-black text-gray-900 dark:text-white;
   }
-</style>?
+</style>
