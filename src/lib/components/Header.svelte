@@ -21,7 +21,7 @@
   <nav class="container mx-auto px-6 py-4">
     <div class="flex justify-between items-center">
       <!-- Logo and Title -->
-      <a href="/" class="flex items-center text-2xl sm:text-xl md:text-2xl lg:text-3xl font-bold text-blue-600 dark:text-blue-400 space-x-2">
+      <a href="/" class="flex items-center text-base sm:text-base md:text-2xl lg:text-3xl font-bold text-blue-600 dark:text-blue-400 space-x-2">
         <img src={Logo} alt="PortfolioAPI Logo" class="h-8 w-8" /> <!-- Adjust height and width -->
         <span>PortfolioAPI</span>
       </a>
